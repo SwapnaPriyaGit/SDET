@@ -2,6 +2,7 @@ package ObjectRepository;
 
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
@@ -70,4 +71,32 @@ public class contact {
 	
 	@FindBy(id="privacy_policy-error")
 	public static WebElement privacyError;
+	
+	@FindBy(xpath="//*[@id=\"block-mainnavigationbt\"]/ul/li[8]/a")
+	public static WebElement textLink;
+	
+	@FindBy(xpath="//*[@class=\"col-md-6 col-lg-6 col-xl-7\"]/p[1]")
+	public static WebElement textComponent1;
+	
+	@FindBy(xpath="//*[@class=\"col-md-6 col-lg-6 col-xl-7\"]/p[2]")
+	public static WebElement textComponent2;
+	
+	@FindBys(@FindBy(xpath="//*[@class=\"col-md-6 col-lg-6 col-xl-7\"]/ul/li"))
+	public static List<WebElement> textComponent3;
+	
+	@FindBys(@FindBy(xpath="//*[@class=\"header-services-menu header-full-width-menu nav-item menu-item--expanded dropdown\"]/ul/li/ul/li"))
+	public static List<WebElement> services;
+	
+	@FindBys(@FindBy(xpath="//*[@class=\\\"header-industries-menu header-full-width-menu nav-item menu-item--expanded dropdown\\\"]/ul/li"))
+	public static List<WebElement> industires;
+	
+	@FindBys(@FindBy(xpath="//*[@class=\\\"header-about-menu nav-item menu-item--expanded dropdown\\\"]/ul/li"))
+	public static List<WebElement> aboutUs;
+	
+	@FindBys(@FindBy(xpath="//*[@class=\\\"header-insights-menu nav-item menu-item--expanded dropdown\\\"]/ul/li"))
+	public static List<WebElement> trendsAndInsights;
+	
+	@FindBys(@FindBy(xpath="//*[@class=\\\"header-careers-menu nav-item menu-item--expanded dropdown\\\"]/ul/li"))
+	public static List<WebElement> careers;
+
 }
